@@ -2,12 +2,13 @@ import express, { Request, Response } from 'express';
 
 const router = express.Router();
 
-router.post("/user", (request: Request, response: Response) => {
+router.post("/login", (request: Request, response: Response) => {
     const {email, password} = request.body;
 
     const user = {
+        id: 1,
         email: "marcelo@gmail.com",
-        password: "123456"
+        password: "123456",
     }
 
     if(email !== user.email) {
